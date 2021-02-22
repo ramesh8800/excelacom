@@ -1,0 +1,22 @@
+variable "cluster_name" {
+  description = "the name of your stack, e.g. \"demo\""
+  default = "galaxy7"
+}
+
+variable "environment" {
+  description = "the name of your environment, e.g. \"prod\""
+  default = "dev"
+}
+
+
+variable "private_subnets" {
+  description = "List of private subnet IDs"
+  type    = list(string)
+  default = ["subnet-0475b8ee0866ce514", "subnet-06fed82599ff539ab", "subnet-0641fdf173336da80"]
+}
+
+variable "public_subnets" {
+  description = "List of private subnet IDs"
+  type    = list(string)
+  default = ["subnet-098e94f3cf6f12fde", "subnet-08b91d53d49eae097", "subnet-0536534c5b784cea4"]
+}
